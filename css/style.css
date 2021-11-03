@@ -5,15 +5,13 @@
 }
 
 html {
-    font-size: 100%;
+    font-size: 90%;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
     color: grey;
 }
 
 .container {
-    background-color: blue;
-    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -22,8 +20,9 @@ html {
 
 nav{
     background-color: black;
-    height: 100%;
     width: 250px;
+    height: calc(100vh - 80px);
+    max-height: 100%;
 }
 
 nav #logo{
@@ -61,8 +60,11 @@ a {
     color: grey;
 }
 
-.container nav .menu-navbar li:hover a{
+.container nav .menu-navbar li a:hover{
     color: white;
+}
+svg:hover path {
+    fill: white;
 }
 
 .link {
@@ -72,12 +74,22 @@ a {
 }
 .fa-plus-square{
     font-size: 3.5em;
-    
+
 }
 .align {
     align-items: center;
 }
 
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 20%;
+}
+.fa-arrow-circle-down {
+    font-size: 0.9em;
+    color: grey;
+}
 
 
 
@@ -90,16 +102,37 @@ a {
             /* main */
 .upgrade {
     background-color: rgba(0, 0, 0, 0.411);
-    width: 1680px;
+    width: calc(100% - 250px);
     height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 9999;
 }            
 
 .container-main {
     display: flex;
-    flex-direction: column;
-                
+    flex-direction: column;     
 }
 
+.btn-main {
+    background-color: rgba(0, 0, 0, 0.411);
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 1em 3em;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2em;
+}
+.btn-main:hover {
+    padding: 1.2em 3.2em;
+}
             /* /main */
 
 
@@ -107,4 +140,8 @@ footer {
     height: 80px;
     width: 100%;
     background-color: #313131;
+    z-index: 9998;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
