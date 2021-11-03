@@ -6,6 +6,9 @@
 
 html {
     font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
 }
 
 .container {
@@ -14,6 +17,7 @@ html {
     width: 100%;
     display: flex;
 }
+            /* nav */
 
 nav{
     background-color: black;
@@ -21,17 +25,70 @@ nav{
     width: 250px;
 }
 
-.container-main {
-    display: flex;
-    flex-direction: column;
-
+nav #logo{
+    width: 70%;
+    margin: 1em;
 }
 
+.menu-navbar {
+    margin: 0 1em;
+}
+
+.flex {
+    display: flex;
+}
+
+.container nav .menu-navbar li a svg {
+    width: 15%;
+}
+
+
+.margin-navbar {
+    margin: 1em 0;
+}
+
+.menu-navbar li a h4 {
+    margin: 0.3em;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+.container nav .menu-navbar li:hover a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+            /* /nav */
+
+
+            /* main */
 .upgrade {
     background-color: rgba(0, 0, 0, 0.411);
     width: 1680px;
     height: 80px;
+}            
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+                
 }
+
+            /* /main */
+
 
 footer {
     height: 80px;
