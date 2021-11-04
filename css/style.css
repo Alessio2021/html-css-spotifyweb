@@ -170,7 +170,6 @@ main{
     width: calc(100% - 250px);
     height: calc(100% - 80px);
     background-color: rgb(20,25,34);
-    padding-top: 50px;
 }
 
 .btn-main {
@@ -190,7 +189,9 @@ main{
 }
 .content-width {
     width: 100%;
-    height: 100%;
+    overflow: auto;
+    height: calc(100vh - 80px);
+    padding-top: 80px;
 }
 .nav-main {
     justify-content: center;
@@ -220,6 +221,10 @@ main{
     width: 80%;
 }
 
+.container-main .album-section ul li{
+    width: 80%;
+}
+
 .album-section h2 {
     padding: 1em;
 }
@@ -227,10 +232,20 @@ main{
     padding: 0.5em;
     font-size: 1vw;
 }
-.container-main .album-section ul li .album h4 {
+.container-main .album-section h4 {
     color: grey;
     font-size: 0.8vw;
+}
+.suggestion {
+    width: 35%;
+}
 
+.suggestion h4 {
+    padding: 0 0 1.5em 1.5em;
+}
+
+.brd-radius {
+    border-radius: 50%;
 }
 
             /* /main */
