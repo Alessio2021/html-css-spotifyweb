@@ -90,7 +90,7 @@ a {
 .container nav .menu-navbar li a:hover{
     color: white;
 }
-svg:hover path {
+.container nav .menu-navbar li:hover path {
     fill: white;
 }
 
@@ -250,9 +250,161 @@ main{
 
             /* /main */
 
-
+            
 footer {
     height: 80px;
     width: 100%;
-    background-color: #313131;
+    background-color: rgb(40,40,40);
+    overflow: hidden;
+}
+            
+            /* COLONNA SINISTRA */
+
+.footer-sx {
+    width: 16%;
+    height: 100%;
+    align-items: center;
+}
+
+
+.track {
+    width: 50px;
+    height: 50px;
+    margin: 1em;
+}
+
+.favourites {
+    justify-content: flex-end;
+    width: 30%;
+}
+
+.footer-sx .favourites .fa-heart:hover {
+    cursor: pointer;
+    color: red;
+    transform: scale(1.1);
+}
+
+.footer-sx .favourites .fa-folder:hover {
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+footer img {
+    width: 100%;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: white;
+}
+footer h4 a {
+    color: white;
+}
+
+footer .far {
+    margin: 0.5em;
+}
+
+/* COLONNA CENTRALE */
+
+.footer-central {
+    width: 68%;
+    height: 100%;
+}
+
+.instrument{
+        justify-content: center;
+}
+
+.footer-central .instrument [class*="fa-"] {
+    color: rgb(156, 156, 156);
+    margin: 0.8em;
+    font-size: 1.3em;
+}
+
+.footer-central .instrument i:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.footer-central .instrument .fa-play-circle:hover {
+    transform: scale(1.2);
+}
+
+.footer-central .instrument .fa-play-circle {
+    font-size: 2.5em;
+    margin: 0.19em 0;
+}
+
+.bar {
+    justify-content: center;
+    font-size: 0.7em;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.bar-line-dark {
+    height: 4px;
+    width: 80%;
+    background-color: rgb(90,90,90);
+    margin: 0 2em;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.bar-line-light {
+    height: 4px;
+    width: 20%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.footer-central .bar .bar-line-dark:hover span{
+    height: 5px;
+    background-color:yellowgreen;
+    cursor: pointer;
+}
+
+/* COLONNA SINISTRA */
+
+.volume {
+    align-items: center;
+}
+
+.footer-sx .volume i {
+    margin: 0 0.7em;
+}
+
+.bar-volume-dark {
+    height: 4px;
+    width: 8vw;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.bar-volume-light {
+    height: 4px;
+    width: 60%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.volume .bar-volume-dark:hover .bar-volume-light {
+    background-color: yellowgreen;
+    height: 5px;
+    cursor: pointer;
+}
+
+.footer-sx .volume i:hover {
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.pointer {
+    width: 8px;
+    height: 7px;
+    border-radius: 15px;
+    background-color: white;
 }
