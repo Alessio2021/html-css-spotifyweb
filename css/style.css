@@ -10,19 +10,33 @@ html {
     font-family: 'Open Sans', sans-serif;
     color: grey;
 }
-
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.float {
+    float: left;
+}
 .container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
 }
+
+
             /* nav */
 
-nav{
-    background-color: black;
+.nav-top {
+    height: calc(100% - 110px);
+}
+
+nav {
     width: 250px;
-    height: calc(100vh - 80px);
-    max-height: 100%;
+    height: 100%;
+    background-color: black;
+    min-height: 300px;
 }
 
 nav #logo{
@@ -33,7 +47,12 @@ nav #logo{
 .menu-navbar {
     margin: 1em 1em;
 }
-
+.overflow {
+    overflow: auto;
+}
+.height-playlist {
+    max-height: 30vh;
+}
 .flex {
     display: flex;
 }
@@ -74,25 +93,43 @@ svg:hover path {
 }
 .fa-plus-square{
     font-size: 3.5em;
+    margin: 0 0.4em;
 
 }
 .align {
     align-items: center;
 }
 
+.playlist:hover a {
+    color: white;
+}
+}
+
 .account {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 20%;
+    height: 80px;
 }
 .fa-arrow-circle-down {
     font-size: 0.9em;
     color: grey;
 }
 
+.account .menu-navbar .margin-navbar a .border-h4 {
+    padding: 0.5em 6em 0.5em 1em;
+}
 
+.account .menu-navbar li .border{
+    border-bottom: 1px solid grey;
+}
 
+.account .menu-navbar .margin-navbar a svg {
+    width: 12%;
+    border-radius: 15px;
+    background-color: grey;
+    margin-right: 1em;
+}
+.account .menu-navbar .margin-navbar a h3 {
+    color: white;
+}
 
 
 
@@ -100,6 +137,12 @@ svg:hover path {
 
 
             /* main */
+main{
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow:hidden;
+}
+
 .upgrade {
     background-color: rgba(0, 0, 0, 0.411);
     width: calc(100% - 250px);
@@ -114,8 +157,9 @@ svg:hover path {
 }            
 
 .container-main {
-    display: flex;
-    flex-direction: column;     
+    width: calc(100% - 250px);
+    height: 100%;
+    background-color: rgb(44,44,44);
 }
 
 .btn-main {
@@ -140,8 +184,4 @@ footer {
     height: 80px;
     width: 100%;
     background-color: #313131;
-    z-index: 9998;
-    position: fixed;
-    bottom: 0;
-    left: 0;
 }
