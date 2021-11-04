@@ -61,6 +61,10 @@ nav #logo{
     display: flex;
 }
 
+.column {
+    flex-direction: column;
+}
+
 .container nav .menu-navbar li a svg {
     width: 15%;
 }
@@ -202,6 +206,33 @@ main{
 .green-border {
     border-bottom: 2px solid rgb(154,226,45);
 }
+
+.album-section{
+    padding: 1em;
+    color: white;
+}
+
+.album {
+    align-items: center;
+}
+
+.container-main .album-section img {
+    width: 80%;
+}
+
+.album-section h2 {
+    padding: 1em;
+}
+.container-main .album-section ul li .album h3 {
+    padding: 0.5em;
+    font-size: 1vw;
+}
+.container-main .album-section ul li .album h4 {
+    color: grey;
+    font-size: 0.8vw;
+
+}
+
             /* /main */
 
 
