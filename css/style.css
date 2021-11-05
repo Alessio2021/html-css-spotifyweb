@@ -56,13 +56,10 @@ nav {
     background-color: black;
     min-height: 350px;
 }
-/* HIDE NAVBAR */
-/* .hide-nav{
-    display: none; */
-}
 
 /* /HIDE NAVBAR */
-nav #logo{
+
+.nav-top #logo {
     width: 70%;
     margin: 1em;
 }
@@ -217,7 +214,6 @@ main{
 }
 .nav-main {
     justify-content: center;
-    justify-content: space-between;
     width: 100%;
     color: gray;
 }
@@ -316,7 +312,7 @@ footer {
             /* COLONNA SINISTRA */
 
 .footer-sx {
-    width: 16%;
+    width: 250px;
     height: 100%;
     align-items: center;
     min-width: 120px;
