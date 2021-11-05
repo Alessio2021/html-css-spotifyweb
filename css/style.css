@@ -19,6 +19,18 @@ html {
     float: left;
 }
 
+.none {
+    display: none;
+}
+
+.relative{
+    position: relative;
+}
+
+.space {
+    justify-content: space-between;
+}
+
 .container {
     width: 100%;
     height: 100vh;
@@ -153,6 +165,15 @@ main{
     overflow:hidden;
 }
 
+.container-main {
+    width: calc(100% - 250px);
+    height: calc(100vh - 80px);
+    background-color: rgb(20,25,34);
+    padding: 1em;
+    color: white;
+}
+
+/* UPGRADE BAR */
 .upgrade {
     background-color: rgba(0, 0, 0, 0.411);
     width: calc(100% - 250px);
@@ -165,12 +186,6 @@ main{
     align-items: center;
     z-index: 9999;
 }            
-
-.container-main {
-    width: calc(100% - 250px);
-    height: calc(100% - 80px);
-    background-color: rgb(20,25,34);
-}
 
 .btn-main {
     background-color: rgba(0, 0, 0, 0.411);
@@ -195,7 +210,13 @@ main{
 }
 .nav-main {
     justify-content: center;
+    width: 100%;
+    color: gray;
 }
+.main-btn {
+    flex-wrap: wrap;
+}
+
 .nav-main .main-btn li {
     padding: 1em;
     text-transform: uppercase;
@@ -207,54 +228,72 @@ main{
 .green-border {
     border-bottom: 2px solid rgb(154,226,45);
 }
+/* /UPGRADE BAR */
 
-.album-section{
-    padding: 1em;
-    color: white;
-}
+/* ALBUM */
 
-.album {
-    align-items: center;
+.container-main h2 {
+    padding: 1em 0;
+    font-size: 2em;
 }
-
-.container-main .album-section img {
-    width: 80%;
-}
-
-.container-main .album-section ul li{
-    width: 80%;
-}
-
-.album-section h2 {
-    padding: 1em;
-}
-.album-section ul {
+.album-row {
     width: 100%;
 }
-.album-section .flex .container-album {
-    width: calc(100% / 6);
-    display: flex;
-    justify-content: space-between;
-}
-
-.container-main .album-section ul li .album h3 {
-    padding: 0.5em;
+.album {
+    width: calc((100% / 6) - 2em);
     text-align: center;
 }
-.container-main .album-section h4 {
+.album-row .album h4 {
+    margin: 0.5em;
+}
+
+.album-row .album h5 {
+    color: gray;
+}
+
+.album-row .album img {
+    width: 100%;
+}
+
+.mrg-1 {
+    margin-right: 2em;
+}
+
+.container-main h3 {
+    padding-bottom: 1em;
     color: grey;
-    text-align: center;
-}
-.suggestion {
-    width: 35%;
+    font-size: 1em;
 }
 
-.suggestion h4 {
-    padding: 0 0 1.5em 1.5em;
-}
-
-.brd-radius {
+.album .relative .radius {
     border-radius: 50%;
+}
+
+
+
+
+
+
+.album-row .album:hover {
+    cursor: pointer;
+}
+.album-row .album:hover div i {
+    display: block;
+}
+.album-row .album:hover div img {
+    opacity: 0.4;
+
+}
+
+.play-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5em;
+    cursor: pointer;
+    display: none;
 }
 
             /* /main */
@@ -430,14 +469,32 @@ footer .far {
 
 /* I breakpoint da usare per le media query sono: 600px, 700px e 1100px */
 
-@media screen and (min-width: 601px) and (max-width: 700px) {
-    .album-section{
+@media screen and (max-width: 600px){
+
+    
+}
+
+@media screen and (min-width: 601px) and (max-width: 700px){
+     .album {
+        width: calc((100% / 2) - 2em);
+    }
+
+    .album-row{
         flex-wrap: wrap;
     }
-    .album-section .flex .container-album {
-        width: calc(100% / 4);
+    
+}
 
-        background-color: white;
+
+@media screen and (max-width: 1100px) and (min-width: 701px){
+    .album-row{
+        flex-wrap: wrap;
+        justify-content: start;
     }
 
+    .album-row li {
+        width: calc(25% - 1em);
+        margin-right: 1em;
+    }
 }
+
