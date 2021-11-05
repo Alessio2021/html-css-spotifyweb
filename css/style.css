@@ -228,13 +228,22 @@ main{
 .album-section h2 {
     padding: 1em;
 }
+.album-section ul {
+    width: 100%;
+}
+.album-section .flex .container-album {
+    width: calc(100% / 6);
+    display: flex;
+    justify-content: space-between;
+}
+
 .container-main .album-section ul li .album h3 {
     padding: 0.5em;
-    font-size: 1vw;
+    text-align: center;
 }
 .container-main .album-section h4 {
     color: grey;
-    font-size: 0.8vw;
+    text-align: center;
 }
 .suggestion {
     width: 35%;
@@ -264,6 +273,7 @@ footer {
     width: 16%;
     height: 100%;
     align-items: center;
+    min-width: 120px;
 }
 
 
@@ -276,6 +286,7 @@ footer {
 .favourites {
     justify-content: flex-end;
     width: 30%;
+    flex-wrap: wrap;
 }
 
 .footer-sx .favourites .fa-heart:hover {
@@ -360,10 +371,16 @@ footer .far {
     border-radius: 10px;
 }
 
-.footer-central .bar .bar-line-dark:hover span{
+.footer-central .bar .bar-line-dark:hover .bar-line-light {
     height: 5px;
     background-color:yellowgreen;
     cursor: pointer;
+}
+.footer-central .bar .bar-line-dark:hover .pointer {
+    width: 8px;
+    height: 7px;
+    border-radius: 15px;
+    background-color: white;
 }
 
 /* COLONNA SINISTRA */
@@ -377,14 +394,14 @@ footer .far {
 }
 
 .bar-volume-dark {
-    height: 4px;
+    height: 5px;
     width: 8vw;
     background-color: grey;
     border-radius: 10px;
 }
 
 .bar-volume-light {
-    height: 4px;
+    height: 5px;
     width: 60%;
     background-color: white;
     border-radius: 10px;
@@ -396,15 +413,31 @@ footer .far {
     cursor: pointer;
 }
 
+
+.footer-sx .volume .bar-volume-dark:hover .pointer {
+    width: 8px;
+    height: 7px;
+    border-radius: 15px;
+    background-color: white;
+}
+
 .footer-sx .volume i:hover {
     color: white;
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.pointer {
-    width: 8px;
-    height: 7px;
-    border-radius: 15px;
-    background-color: white;
+
+/* I breakpoint da usare per le media query sono: 600px, 700px e 1100px */
+
+@media screen and (min-width: 601px) and (max-width: 700px) {
+    .album-section{
+        flex-wrap: wrap;
+    }
+    .album-section .flex .container-album {
+        width: calc(100% / 4);
+
+        background-color: white;
+    }
+
 }
