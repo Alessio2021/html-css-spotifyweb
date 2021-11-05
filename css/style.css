@@ -23,7 +23,7 @@ html {
     display: none;
 }
 
-.relative{
+.relative {
     position: relative;
 }
 
@@ -56,7 +56,12 @@ nav {
     background-color: black;
     min-height: 350px;
 }
+/* HIDE NAVBAR */
+/* .hide-nav{
+    display: none; */
+}
 
+/* /HIDE NAVBAR */
 nav #logo{
     width: 70%;
     margin: 1em;
@@ -202,6 +207,8 @@ main{
 .btn-main:hover {
     padding: 1.2em 3.2em;
 }
+/* /UPGRADE BAR */
+
 .content-width {
     width: 100%;
     overflow: auto;
@@ -210,6 +217,7 @@ main{
 }
 .nav-main {
     justify-content: center;
+    justify-content: space-between;
     width: 100%;
     color: gray;
 }
@@ -228,7 +236,6 @@ main{
 .green-border {
     border-bottom: 2px solid rgb(154,226,45);
 }
-/* /UPGRADE BAR */
 
 /* ALBUM */
 
@@ -470,8 +477,51 @@ footer .far {
 /* I breakpoint da usare per le media query sono: 600px, 700px e 1100px */
 
 @media screen and (max-width: 600px){
+    .nav-top { 
+        display: none;
+    }
+    .account {
+        display: none;
+    }
 
-    
+    nav {
+        width: 50px;
+    }
+    .hide.nav {
+        display: block;
+    }
+    .container .clearfix .hide-nav ul li a img {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0.5em;
+        color: grey;
+    }
+    .container .clearfix .hide-nav ul li:hover a img{
+        color: white;
+    }
+    .container-main {
+        width: calc(100% - 50px);
+    }
+    .upgrade {
+        width: calc(100% - 50px);
+    }
+
+    .album-row {
+        flex-wrap: wrap;
+    }
+
+    .album {
+        width: 40vw;
+    }  
+
+    .content-width {
+        width: calc(100vw - 62px);
+    }
+
+    .main-btn {
+        justify-content: center;
+    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 700px){
